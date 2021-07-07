@@ -1,6 +1,7 @@
 # Postwork 02
+Antes de comenzar este postwork se debe designar el espacio de trabajo con el comando `setwd()`
 
-Importa los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php 
+Importamos los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php 
 
 ```R
 le1718 <- "https://www.football-data.co.uk/mmz4281/1718/SP1.csv"
@@ -8,7 +9,7 @@ le1819 <- "https://www.football-data.co.uk/mmz4281/1819/SP1.csv"
 le1920 <- "https://www.football-data.co.uk/mmz4281/1920/SP1.csv"
 ```
 
-Con ayuda de la función `download.file` descargamos los archivos en el directorio previamente elegido
+Con ayuda de la función `download.file` descargamos los archivos en el directorio previamente elegido 
 
 ```R
 download.file(url = le1718, destfile = "le1718.csv", mode = "wb")
@@ -21,7 +22,7 @@ Carga de datos
 ligaEsp <- lapply(dir(), read.csv)
 ```
 
-2. Estructura de los dataframes
+
 
 ```R
 str(ligaEsp[[1]]); str(ligaEsp[[2]]); str(ligaEsp[[3]])
