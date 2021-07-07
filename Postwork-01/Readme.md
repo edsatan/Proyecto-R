@@ -7,7 +7,7 @@ Comenzamos importando los datos de soccer de la temporada 2019/2020 de la primer
 futbolData <- read.csv("https://www.football-data.co.uk/mmz4281/1920/SP1.csv")
 ```
 
-Del dataframe ```futbolData``` extraemos las columnas de interés 
+Del dataframe `futbolData` extraemos las columnas de interés 
 
 ```R
 homeGoals <- futbolData$FTHG  #Goles anotados por los equipos que jugaron en casa
@@ -15,7 +15,7 @@ homeGoals <- futbolData$FTHG  #Goles anotados por los equipos que jugaron en cas
 awayGoals <- futbolData$FTAG  #Goles anotados por los equipos que jugaron como visitante
 ```
 
-La función ``table`` utiliza los factores de clasificación cruzada para construir una tabla de contingencia de los conteos en cada combinación de factores. Por ejemplo
+La función `table` utiliza los factores de clasificación cruzada para construir una tabla de contingencia de los conteos en cada combinación de factores. Por ejemplo
 
 ```R
 table(homeGoals)
@@ -33,7 +33,7 @@ table(homeGoals)/length(homeGoals) # Probabilidad marginal equipo de casa
 table(awayGoals)/length(awayGoals) # Probabilidad marginal equipo visitante
 ```
 
-Para el calculo de la probabilidad conjunta se llaman ambos vectores ```homeGoals``` y  ```awayGoald``` en el comando ```table```.
+Para el calculo de la probabilidad conjunta se llaman ambos vectores `homeGoals` y  `awayGoald` en el comando `table`.
 
 ```R
 
