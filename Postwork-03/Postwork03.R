@@ -1,5 +1,3 @@
-## ------------------------------- PostWork3 -----------------------------------
-
 ##1. Con el último data frame obtenido en el postwork de la sesión 2,
 #elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
 homeGoals2 <- data$FTHG
