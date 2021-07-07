@@ -2,7 +2,7 @@
 # Proyecto R
 Proyecto final del primer módulo de la fase dos del programa BEDU Disruptive Skills: Data Science
 
-* [Postwork01](https://github.com/edsatan/Proyecto-R/Postwork-01)
+* [Postwork01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
 
 ## Postwork 01
 
