@@ -1,4 +1,10 @@
-1. Con el último data frame obtenido en el postwork de la sesión 2, elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
+Cargamos el dataframe obtenido en el [postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas.
+ ```R
+data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/Postwork-02/dataPostwork2.csv")
+data <- mutate(data, Date = as.Date(Date, "%Y-%m-%d"))
+```
+
+Seleccionesmos nuestras columnas de interés, goles de casa (FTAH) y goles de visitante (FTAG) para realizar el cálculo de las probabilidades marginales y conjusta como en el [prework 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
 
 ```R
 homeGoals2 <- data$FTHG
