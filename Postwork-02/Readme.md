@@ -17,12 +17,12 @@ download.file(url = le1819, destfile = "le1819.csv", mode = "wb")
 download.file(url = le1920, destfile = "le1920.csv", mode = "wb")
 ```
 
-Carga de datos
+Cargamos los datos en la lista `ligaEsp`
 ```R
 ligaEsp <- lapply(dir(), read.csv)
 ```
 
-
+Los siguientes comandos sirven para conocer la estructura de los dataframes almacenados en la lista `ligaEsp`
 
 ```R
 str(ligaEsp[[1]]); str(ligaEsp[[2]]); str(ligaEsp[[3]])
@@ -34,21 +34,16 @@ summary(ligaEsp[[1]]); summary(ligaEsp[[2]]); summary(ligaEsp[[3]])
 View(ligaEsp[[1]]); View(ligaEsp[[2]]); View(ligaEsp[[3]])
 ```
 
-3. Selección de las columnas de interés (Date, HomeTeam, AwayTeam, FTHG, FTAG y FTR)
+Seleccionamos las columnas de interés (Date, HomeTeam, AwayTeam, FTHG, FTAG y FTR) utilizando la librería `dplyr` y mostramos la nueva estructura 
 
 ```R
 library(dplyr)
 
 ligaEsp <- lapply(ligaEsp, select, Date, HomeTeam:FTR)
-```
 
-4. Fortmato de la fecha
-
-```R
 str(ligaEsp)
 ```
-
-##Estadarizamos el formato de fecha para los distintos DF
+Cambiamos el forrmato de la fecha de `chr` a `Date` con el comando `mutate`. En este paso se debe tener claro el formato en el que se encuentra escritas las fechas. Con el comando `str` verificamos que se haya realizado de forma correcta el cambio.
 
 ```R
 ligaEsp[[1]] <- mutate(ligaEsp[[1]], Date = as.Date(Date, "%d/%m/%y"))
@@ -58,8 +53,7 @@ ligaEsp[[3]] <- mutate(ligaEsp[[3]], Date = as.Date(Date, "%d/%m/%Y"))
 str(ligaEsp)
 View(ligaEsp[[1]]); View(ligaEsp[[2]]); View(ligaEsp[[3]])
 ```
-
-#4.1 Unión de los dataframes
+Por último unimos los tres dataframes en uno solo. Y nuevamente observamos la estructura de nuestros datos. 
 
 ```R
 data <- do.call(rbind, ligaEsp)
