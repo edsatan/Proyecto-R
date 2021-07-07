@@ -6,12 +6,12 @@ awayGoals2 <- data$FTAG
 ##La probabilidad (marginal) de que el equipo que juega en casa 
 ##anote x goles (x = 0, 1, 2, ...)
 probCasa <- table(homeGoals2)/length(homeGoals2)
-names(probCasa)
+probCasa
 
 ##La probabilidad (marginal) de que el equipo que juega como 
 ##visitante anote y goles (y = 0, 1, 2, ...)
 probVisitante <- table(awayGoals2)/length(awayGoals2)
-
+probVisitante
 # La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como
 # visitante anote y goles (x = 0, 1, 2, ..., y = 0, 1, 2, ...)
 probConjunta <- table(homeGoals2, awayGoals2)/length(homeGoals2)
