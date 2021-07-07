@@ -1,10 +1,10 @@
-Cargamos el dataframe obtenido en el [postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas.
+Cargamos el dataframe obtenido en el [Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas.
  ```R
 data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/Postwork-02/dataPostwork2.csv")
 data <- mutate(data, Date = as.Date(Date, "%Y-%m-%d"))
 ```
 
-Seleccionesmos nuestras columnas de interés, goles de casa (FTAH) y goles de visitante (FTAG) para realizar el cálculo de las probabilidades marginales y conjusta como en el [prework 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
+Seleccionesmos nuestras columnas de interés, goles de casa (FTAH) y goles de visitante (FTAG) para realizar el cálculo de las probabilidades marginales y conjusta como en el [Postwork 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
 
 ```R
 homeGoals2 <- data$FTHG
