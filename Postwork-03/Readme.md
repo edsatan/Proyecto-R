@@ -4,7 +4,7 @@ data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/Post
 data <- mutate(data, Date = as.Date(Date, "%Y-%m-%d"))
 ```
 
-Seleccionesmos nuestras columnas de interés, goles de casa (FTAH) y goles de visitante (FTAG) para realizar el cálculo de las probabilidades marginales y conjusta como en el [Postwork 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
+Seleccionesmos nuestras columnas de interés (Goles de casa `FTHG` y goles de visitante `FTAG`) para realizar el cálculo de las probabilidades marginales y conjunta como en el [Postwork 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
 
 ```R
 homeGoals2 <- data$FTHG
