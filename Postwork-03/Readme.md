@@ -11,29 +11,57 @@ homeGoals2 <- data$FTHG
 awayGoals2 <- data$FTAG
 ```
 
-La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x = 0, 1, 2, ...)
+Calculamos las probabilidades marginales y la conjunta
+
+* Probabilidad marginal equipo de casa
 
 ```R
 probCasa <- table(homeGoals2)/length(homeGoals2)
-names(probCasa)
+probCasa
+
+#homeGoals2
+#          0           1           2           3           4           5           6           7           8 
+#0.232456140 0.327192982 0.266666667 0.112280702 0.035087719 0.019298246 0.005263158 0.000877193 0.000877193 
 ```
 
-La probabilidad (marginal) de que el equipo que juega como visitante anote y goles (y = 0, 1, 2, ...)
+* Probabilidad marginal equipo visitante
 
 ```R
 probVisitante <- table(awayGoals2)/length(awayGoals2)
+probVisitante
+
+#awayGoals2
+#          0           1           2           3           4           5           6 
+#0.351754386 0.340350877 0.212280702 0.054385965 0.028947368 0.009649123 0.002631579 
 ```
 
-La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x = 0, 1, 2, ..., y = 0, 1, 2, ...)
+* Probabilidad conjunta
 
 ```R
 probConjunta <- table(homeGoals2, awayGoals2)/length(homeGoals2)
 probConjunta
+
+#          awayGoals2
+#homeGoals2           0           1           2           3           4           5           6
+#         0 0.078070175 0.080701754 0.045614035 0.018421053 0.005263158 0.004385965 0.000000000
+#         1 0.115789474 0.114912281 0.068421053 0.017543860 0.008771930 0.001754386 0.000000000
+#         2 0.087719298 0.093859649 0.061403509 0.011403509 0.008771930 0.001754386 0.001754386
+#         3 0.044736842 0.032456140 0.024561404 0.006140351 0.001754386 0.001754386 0.000877193
+#         4 0.014035088 0.010526316 0.007017544 0.000000000 0.003508772 0.000000000 0.000000000
+#         5 0.008771930 0.005263158 0.004385965 0.000000000 0.000877193 0.000000000 0.000000000
+#         6 0.002631579 0.001754386 0.000000000 0.000877193 0.000000000 0.000000000 0.000000000
+#         7 0.000000000 0.000877193 0.000000000 0.000000000 0.000000000 0.000000000 0.000000000
+#         8 0.000000000 0.000000000 0.000877193 0.000000000 0.000000000 0.000000000 0.000000000
+
 ```
 
-2. Realiza lo siguiente:
+Para poder observar mejor las probabilidades, se realizar los siguientes gráficos. Primero cargamos la librería `ggplot2`
 
-Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa
+```R
+library(ggplot2)
+```
+
+Para las probabilidades marginales realizamos gráficos de barras. 
 
 ```R
 probCasaPlot <- ggplot() + 
@@ -46,7 +74,6 @@ probCasaPlot <- ggplot() +
 probCasaPlot
 ```
 
-Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo visitante.
 
 ```R
 probVisitantePlot <- ggplot() + 
@@ -58,7 +85,7 @@ probVisitantePlot <- ggplot() +
 probVisitantePlot
 ```
 
-Un HeatMap para las probabilidades conjuntas estimadas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido.
+Para la probabilidad conjunta realizamos un HeatMap.
 
 ```R
 install.packages("reshape2")
