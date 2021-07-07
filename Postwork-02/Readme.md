@@ -64,3 +64,9 @@ str(data)
 head(data)
 class(data)
 ``` 
+
+Como paso extra para el postwork 03, vamos a almacenar el dataframe resultante `data` en el archivo `dataPostwork2.csv`
+
+```R
+write.csv(data, "dataPostwork2.csv", row.names = FALSE)
+``` 
