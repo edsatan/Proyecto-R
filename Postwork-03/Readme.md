@@ -1,26 +1,35 @@
-##1. Con el último data frame obtenido en el postwork de la sesión 2,
-#elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
+1. Con el último data frame obtenido en el postwork de la sesión 2, elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
+
+```R
 homeGoals2 <- data$FTHG
 awayGoals2 <- data$FTAG
+```
 
-##La probabilidad (marginal) de que el equipo que juega en casa 
-##anote x goles (x = 0, 1, 2, ...)
+La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x = 0, 1, 2, ...)
+
+```R
 probCasa <- table(homeGoals2)/length(homeGoals2)
 names(probCasa)
+```
 
-##La probabilidad (marginal) de que el equipo que juega como 
-##visitante anote y goles (y = 0, 1, 2, ...)
+La probabilidad (marginal) de que el equipo que juega como visitante anote y goles (y = 0, 1, 2, ...)
+
+```R
 probVisitante <- table(awayGoals2)/length(awayGoals2)
+```
 
-# La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como
-# visitante anote y goles (x = 0, 1, 2, ..., y = 0, 1, 2, ...)
+La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x = 0, 1, 2, ..., y = 0, 1, 2, ...)
+
+```R
 probConjunta <- table(homeGoals2, awayGoals2)/length(homeGoals2)
 probConjunta
-##2. Realiza lo siguiente:
+```
 
-##Un gráfico de barras para las probabilidades marginales estimadas del número 
-##de goles que anota el equipo de casa
+2. Realiza lo siguiente:
 
+Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo de casa
+
+```R
 probCasaPlot <- ggplot() + 
                 geom_col(aes(x=0:8, y=probCasa), color="black", fill="blue")+
                 ggtitle("Probabilidades Marginales FTHG") +
@@ -29,9 +38,11 @@ probCasaPlot <- ggplot() +
                 theme_light()
 
 probCasaPlot
+```
 
-##Un gráfico de barras para las probabilidades marginales estimadas del número 
-##de goles que anota el equipo visitante.
+Un gráfico de barras para las probabilidades marginales estimadas del número de goles que anota el equipo visitante.
+
+```R
 probVisitantePlot <- ggplot() + 
                      geom_col(aes(x=0:6, y=probVisitante), color="black", fill="green")+
                      ggtitle("Probabilidades Marginales FTAG") +
@@ -39,9 +50,11 @@ probVisitantePlot <- ggplot() +
                      xlab("Goles") + 
                      theme_light()
 probVisitantePlot
+```
 
-#Un HeatMap para las probabilidades conjuntas estimadas de los números de goles 
-#que anotan el equipo de casa y el equipo visitante en un partido.
+Un HeatMap para las probabilidades conjuntas estimadas de los números de goles que anotan el equipo de casa y el equipo visitante en un partido.
+
+```R
 install.packages("reshape2")
 library(reshape2)
 
@@ -54,3 +67,4 @@ probConjuntaPlot <- ggplot()+
   scale_y_continuous(breaks = unique(probConjunta[,2]))+ ##Determinamos los valores unicos para y
   scale_fill_gradient2(high = "green", mid = "black")
 probConjuntaPlot
+```
