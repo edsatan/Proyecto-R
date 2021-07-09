@@ -27,3 +27,6 @@ plot(serie.ts, las = 1, col = 4, lwd = 2, xlab = "Tiempo", ylab = "Goles",
      main = "Serie de Goles Promedio",
      sub = "Serie mensual: Agosto de 2010 a Diciembre de 2019")
 ```
+<p align="center">
+  <img src="seriedetiempo.png" />
+</p>
