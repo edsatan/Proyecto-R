@@ -11,6 +11,8 @@ match.data$sumagoles <- match.data$home.score + match.data$away.score
 Obtén el promedio por mes de la suma de goles.
 
 ```R
+library(dplyr)
+
 serie <- match.data %>% mutate(anio_mes = substr(date, 1, 7)) %>%
   group_by(anio_mes) %>% summarize(goles_prom = mean(sumagoles))
 ```
