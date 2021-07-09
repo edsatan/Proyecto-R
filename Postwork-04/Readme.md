@@ -96,10 +96,6 @@ mediasBSPlot <-   ggplot() +
 
 mediasBSPlot
 ```
+__Conclusión__
 
-Menciona en cuáles casos le parece razonable suponer que los cocientes de la tabla en el punto 1, son iguales a 1 (en tal caso tendríamos independencia de las variables aleatorias X y Y).
-
-"""
-  - A menor cantidad de goles, existe una mayor independencia
-  
-"""
+Nos parece razonable asumir que a menor cantidad de goles, existe una mayor independencia.
