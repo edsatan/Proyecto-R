@@ -7,10 +7,9 @@ Puedes colocar como argumento row.names = FALSE en write.csv.
 library(dplyr)
 ```
 
+Primero se debe seleccionar el directorio de trabajo con el comando `setwd(/ruta)`
 
-setwd("C:/Users/Santiago/Documents/Beca BEDU/Fase2_R/Sesion_5")
-
-##Carga de datos
+Carga de datos
 
 ```R
 dataurl1819 <- "https://www.football-data.co.uk/mmz4281/1819/SP1.csv"
