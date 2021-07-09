@@ -74,6 +74,9 @@ probCasaPlot <- ggplot() +
 probCasaPlot
 ```
 
+<p align="center">
+  <img src="home_prob.png" />
+</p>
 
 ```R
 probVisitantePlot <- ggplot() + 
@@ -84,6 +87,10 @@ probVisitantePlot <- ggplot() +
                      theme_light()
 probVisitantePlot
 ```
+
+<p align="center">
+  <img src="away_prob.png" />
+</p>
 
 Para la probabilidad conjunta realizamos un HeatMap.
 
@@ -101,3 +108,7 @@ probConjuntaPlot <- ggplot()+
   scale_fill_gradient2(high = "green", mid = "black")
 probConjuntaPlot
 ```
+
+<p align="center">
+  <img src="conjunta.png" />
+</p>
