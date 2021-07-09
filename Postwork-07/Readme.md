@@ -1,4 +1,4 @@
-
+```R
 install.packages("mongolite")
 
 library("mongolite")
@@ -12,4 +12,5 @@ consulta <- cone$find(query = '{"date":"2015-12-20","home.team":"Real Madrid"}')
 consulta
 
 rm(cone)
+```
 
