@@ -69,6 +69,10 @@ tablaCocientesPlot <-   ggplot() +
 tablaCocientesPlot
 ```
 
+<p align="center">
+  <img src="cocientes.png" />
+</p>
+
 Mediante un procedimiento de boostrap, obtnemos más cocientes similares a los obtenidos en la dataframe `probdf`. Aplicamos el remuestreo bootstrap
 
 ```R
