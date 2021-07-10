@@ -1,5 +1,4 @@
-# Postwork 01
-
+# Postwork 01 Introducción a R y Software
 
 Comenzamos importando los datos de soccer de la temporada 2019/2020 de la primera división de la liga española que se puede encontrar en el enlace: https://www.football-data.co.uk/spainm.php
 
