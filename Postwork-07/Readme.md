@@ -21,6 +21,11 @@ Relizamos un `count` para conocer el número de registros en la base de datos
 cone$count()
 ```
 
+```R
+> cone$count()
+[1] 3800
+```
+
 Y una pequeña consulta para conocer el número de goles que metió el Real Madrid el 20 de diciembre de 2015 y contra que equipo jugó, ¿perdió ó fue goleada?
 
 ```R
