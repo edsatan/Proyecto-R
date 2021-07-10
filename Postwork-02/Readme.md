@@ -1,4 +1,5 @@
-# Postwork 02
+# Postwork 02 Programación y manipulación de datos en R
+
 Antes de comenzar este postwork se debe designar el espacio de trabajo con el comando `setwd()`
 
 Importamos los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php 
