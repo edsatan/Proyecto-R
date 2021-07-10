@@ -1,4 +1,4 @@
-
+# Postwork 07 RStudio Cloud - Github, conexiones con BDs y lectura de datos externos
 
 El objetivo de este postwork es realizar el alojamiento de un fichero `.csv` a una base de datos (BDD), en un local host de Mongodb a través de `R`. Lo primero que se realiza es crear una conexión desde `Mongo Atlas` a `Mongo Compas`. Estando dentro de Compas se crea una base de datos con el nombre `match_games` y dentro de esta base de datos se crea la colección `match`. Dentro de la colección `match` se carga el archivo [`match.data.csv`](https://github.com/edsatan/Proyecto-R/blob/main/Postwork-07/match.data.csv) y nos cambiamos a `R Studio`
 
