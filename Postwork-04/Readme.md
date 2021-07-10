@@ -100,5 +100,6 @@ __Conclusión__
 
 Nos parece razonable asumir que a menor cantidad de goles, existe una mayor independencia.
 
-[Postwork 05](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-05)
+
+<h3 align="center"> ⏭️ <a href="https://github.com/edsatan/Proyecto-R/tree/main/Postwork-05"> Postwork 05</a></h3>
 
