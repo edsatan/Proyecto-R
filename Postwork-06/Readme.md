@@ -1,3 +1,5 @@
+# Postwork 06 Series de tiempo
+
 Importa el conjunto de datos match.data.csv a R y realiza lo siguiente:
 Agrega una nueva columna sumagoles que contenga la suma de goles por partido.
 
