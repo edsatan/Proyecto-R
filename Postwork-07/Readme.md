@@ -15,14 +15,14 @@ Posteriormente realizamos la conexion con nuestro servidor de la siguiente forma
 cone <- mongo("match", url = "mongodb+srv://manueeellll:manuel21@cluster0.1vtxm.mongodb.net/match_games?retryWrites=true&w=majority")
 ```
 
-Relizamos un `count` para conocer el número de registros en la base de datos
+Relizamos un `count` para conocer el número de registros en la base de datos. En este caso se puede verificar que son 3800 entradas o documentos. 
 
 ```R
 cone$count()
 #[1] 3800
 ```
 
-Realizamod una consulta para conocer el número de goles que metió el Real Madrid el 20 de diciembre de 2015 y contra que equipo jugó para saber si ganó o perdió
+Realizamos una consulta para conocer el número de goles que metió el Real Madrid el 20 de diciembre de 2015 y contra que equipo jugó para saber si ganó o perdió
 
 ```R
 consulta <- cone$find(query = '{"date":"2015-12-20","home.team":"Real Madrid"}')  
