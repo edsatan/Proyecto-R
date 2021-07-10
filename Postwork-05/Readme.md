@@ -80,3 +80,5 @@ deberá especificar en date.
 ```R
 p <- predict(ranking, date = fechas[n])
 ```
+
+[Postwork 06](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-06)
