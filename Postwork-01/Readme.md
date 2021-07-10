@@ -75,4 +75,4 @@ m <- table(homeGoals, awayGoals)/length(homeGoals)
 sum(m)
 ```
 
-<h3 align="center"> ⏭️ <a href="https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02"> Postwork 07</a></h3>
+<h3 align="center"> ⏭️ <a href="https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02"> Postwork 02</a></h3>
