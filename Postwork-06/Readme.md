@@ -30,3 +30,6 @@ plot(serie.ts, las = 1, col = 4, lwd = 2, xlab = "Tiempo", ylab = "Goles",
 <p align="center">
   <img src="seriedetiempo.png" />
 </p>
+
+[Postwork 07](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-07)
+
