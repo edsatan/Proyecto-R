@@ -26,7 +26,7 @@ cone$count()
 [1] 3800
 ```
 
-Y una pequeña consulta para conocer el número de goles que metió el Real Madrid el 20 de diciembre de 2015 y contra que equipo jugó, ¿perdió ó fue goleada?
+Consulta para conocer el número de goles que metió el Real Madrid el 20 de diciembre de 2015 y contra que equipo jugó, ¿perdió ó fue goleada?
 
 ```R
 consulta <- cone$find(query = '{"date":"2015-12-20","home.team":"Real Madrid"}')           
@@ -34,9 +34,7 @@ consulta <- cone$find(query = '{"date":"2015-12-20","home.team":"Real Madrid"}')
 consulta
 ```
 
-Realiza una consulta utilizando la sintaxis de Mongodb en la base de datos, para conocer el número de goles que metió el Real Madrid el 20 de diciembre de 2015 y contra que equipo jugó, ¿perdió ó fue goleada?
-
-El Real Madrid en ese partido anoto 10 goles y juego contra el equipo Vallecano como podemos ver en la consulta de abajo
+El Real Madrid en ese partido anoto 10 goles y jugo contra el equipo Vallecano como podemos ver en la consulta de abajo
 
 ```R
 > consulta
