@@ -75,4 +75,4 @@ m <- table(homeGoals, awayGoals)/length(homeGoals)
 sum(m)
 ```
 
-[Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) Programación y manipulación de datos en R
+[Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02)
