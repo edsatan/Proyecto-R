@@ -1,3 +1,5 @@
+# Postwork 04 Algunas distribuciones, teorema central del límite y contraste de hipótesis
+
 Cargamos el archivo del [postwork 2](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y seleccionamos las columnas de interés
 
 ```R
