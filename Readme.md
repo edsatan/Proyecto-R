@@ -6,7 +6,6 @@ En este repositorio se almacenan los postworks realizados durante el módulo de 
 
 * [Postwork](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01) Proyecto Final
 
-
 * [Postwork 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01) Introducción a R y Software
 * [Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) Programación y manipulación de datos en R
 * [Postwork 03](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-03) Análisis Exploratorio de Datos (AED o EDA) con R
