@@ -31,5 +31,5 @@ plot(serie.ts, las = 1, col = 4, lwd = 2, xlab = "Tiempo", ylab = "Goles",
   <img src="seriedetiempo.png" />
 </p>
 
-[Postwork 07](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-07)
 
+<h3 align="right"><a href="https://github.com/edsatan/Proyecto-R/tree/main/Postwork-07">Postwork 07</a></h3>
