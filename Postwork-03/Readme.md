@@ -1,3 +1,5 @@
+# Postwork 03 Análisis Exploratorio de Datos (AED o EDA) con R
+
 Cargamos el dataframe obtenido en el [Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas.
  ```R
 data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/Postwork-02/dataPostwork2.csv")
