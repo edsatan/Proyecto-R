@@ -81,4 +81,5 @@ deberá especificar en date.
 p <- predict(ranking, date = fechas[n])
 ```
 
-[Postwork 06](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-06)
+<h3 align="center"> ⏭️ <a href="https://github.com/edsatan/Proyecto-R/tree/main/Postwork-06"> Postwork 06</a></h3>
+
