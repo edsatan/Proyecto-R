@@ -34,6 +34,12 @@ consulta <- cone$find(query = '{"date":"2015-12-20","home.team":"Real Madrid"}')
 consulta
 ```
 
+```R
+> consulta
+        date   home.team home.score away.team away.score
+1 2015-12-20 Real Madrid         10 Vallecano          2
+```
+
 Por último, cerramos la conexión con la base de datos
 
 ```R
