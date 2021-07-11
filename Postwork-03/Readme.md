@@ -3,6 +3,7 @@
 Cargamos el dataframe obtenido en el [Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas.
  ```R
 data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/Postwork-02/dataPostwork2.csv")
+
 data <- mutate(data, Date = as.Date(Date, "%Y-%m-%d"))
 ```
 
@@ -57,13 +58,13 @@ probConjunta
 
 ```
 
-Para poder observar mejor las probabilidades, se realizar los siguientes gráficos. Primero cargamos la librería `ggplot2`
+Para entender mejor los resultados de las operaciones realizadas, desplegaremos unos gráficos utilizando la librería `ggplot2`. 
 
 ```R
 library(ggplot2)
 ```
 
-Para las probabilidades marginales realizamos gráficos de barras. 
+Para el caso de las probabilidades marginales, se obtó por utilizar un gráfico de barras, permitiendonos observar la distribución y comportamiento de las distintas probabilidades de una manera más rápida y sencilla.
 
 ```R
 probCasaPlot <- ggplot() + 
@@ -94,7 +95,7 @@ probVisitantePlot
   <img src="away_prob.png" />
 </p>
 
-Para la probabilidad conjunta realizamos un HeatMap.
+Para la probabilidad conjunta, en donde interactuan dos variables, goles de locales y goles de visitantes, obtamos por un mapa de calor para ilustrar los resultados. Por medio de un mapa de color podemos determinar los disntintos valores de probabilidad obtenidos dependiendo de la tonalidad que adquieran, permitiendo un análisis visual sencillo.
 
 ```R
 install.packages("reshape2")
