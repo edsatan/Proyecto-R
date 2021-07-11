@@ -6,7 +6,7 @@ Comenzamos importando los datos de soccer de la temporada 2019/2020 de la primer
 futbolData <- read.csv("https://www.football-data.co.uk/mmz4281/1920/SP1.csv")
 ```
 
-Del dataframe `futbolData` extraemos las columnas de interés 
+De los datos obtenidos, tomamos los goles anotados de cada equipo local (`FTHG`) y visitante (`FTAG`).
 
 ```R
 homeGoals <- futbolData$FTHG  #Goles anotados por los equipos que jugaron en casa
@@ -14,7 +14,8 @@ homeGoals <- futbolData$FTHG  #Goles anotados por los equipos que jugaron en cas
 awayGoals <- futbolData$FTAG  #Goles anotados por los equipos que jugaron como visitante
 ```
 
-La función `table` utiliza los factores de clasificación cruzada para construir una tabla de contingencia de los conteos en cada combinación de factores. Por ejemplo
+Utilizando la función `table()`, por medio de clasificación cruzada construimos una “tabla de contigencia”, la cual determina en cuantas ocaciones de las distintas anotaciones realizadas (0,1,2,…) se tuvo el mismo resultado, es decir en cuantos encuentros el marcados fue 0, 1, 2, y asi
+sucesivamente.
 
 ```R
 table(homeGoals)
@@ -24,15 +25,14 @@ table(homeGoals)
 #88 132  99  38  14   8   1 
 ```
 
-Este comando clasificó la cantidad de goles marcados por el equipo de casa y su frecuencia. Para calcular la probabilidad marginal solo se divide entre el total de partidos (casos). Se hace lo mismo con el equipo visitante.
+Con las tablas de contigencias obtenidas para las anotaciones de los equipos locales y los equipos visitantes, calculamos su probabilidad marginal, dividiendolas entre el total de partidos que se jugaron. La probabilidad simple o marginal se refiere a la probabilidad de ocurrencia de un suceso.
 
 ``` R
 table(homeGoals)/length(homeGoals) # Probabilidad marginal equipo de casa
 
 table(awayGoals)/length(awayGoals) # Probabilidad marginal equipo visitante
 ```
-
-Para el calculo de la probabilidad conjunta se llaman ambos vectores `homeGoals` y  `awayGoald` en el comando `table`.
+Cuando se está interesado en conocer la probabilidad de que dos sucesos se verifiquen simultáneamente, se habla de probabilidad conjunta. Para el calculo de la probabilidad conjunta se llaman ambos vectores `homeGoals` y  `awayGoals` dentro el comando `table`.
 
 ```R
 
@@ -49,6 +49,7 @@ table(homeGoals, awayGoals) # Tabla conjunta
 #        6  1  0  0  0  0  0
 
 ```
+
 Dividimos entre la cantidad de casos para obtener la probabilidad conjunta
 
 ```R
