@@ -1,4 +1,4 @@
-# Postwork 03 Análisis Exploratorio de Datos (AED o EDA) con R
+# Postwork 03 Análisis Exploratorio de Datos con R
 
 Cargamos el dataframe obtenido en el [Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas.
  ```R
