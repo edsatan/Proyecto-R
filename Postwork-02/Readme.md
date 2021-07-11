@@ -1,15 +1,14 @@
 # Postwork 02 Programación y manipulación de datos en R
 
-Antes de comenzar este postwork se debe designar el espacio de trabajo con el comando `setwd()`
+Antes de comenzar este postwork se debe designar el espacio de trabajo con el comando `setwd()`, de preferencia una carpeta que contenga solo lor archivos con los que se van a trabajar.
 
-Importamos los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php 
+Importamos los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php .
 
 ```R
 le1718 <- "https://www.football-data.co.uk/mmz4281/1718/SP1.csv"
 le1819 <- "https://www.football-data.co.uk/mmz4281/1819/SP1.csv"
 le1920 <- "https://www.football-data.co.uk/mmz4281/1920/SP1.csv"
 ```
-
 Con ayuda de la función `download.file` descargamos los archivos en el directorio previamente elegido 
 
 ```R
@@ -18,12 +17,12 @@ download.file(url = le1819, destfile = "le1819.csv", mode = "wb")
 download.file(url = le1920, destfile = "le1920.csv", mode = "wb")
 ```
 
-Cargamos los datos en la lista `ligaEsp`
+Leemos cada uno de los `.csv` y los almacenamos en una lista `ligaEsp` en R para facilitar su manipulación. 
+
 ```R
 ligaEsp <- lapply(dir(), read.csv)
 ```
-
-Los siguientes comandos sirven para conocer la estructura de los dataframes almacenados en la lista `ligaEsp`
+Con ayuda de los comandos `str()` , `summary()`, `head()` y `View()` conocemos un poco más la estructura de los datos, de esta manera podemos encontrar irregularidades, las cuales procesamos para dejar los datos de una manera “limpia” y optima, seleccionando solo aquellos datos necesarios para el análisis. 
 
 ```R
 str(ligaEsp[[1]]); str(ligaEsp[[2]]); str(ligaEsp[[3]])
@@ -34,8 +33,7 @@ summary(ligaEsp[[1]]); summary(ligaEsp[[2]]); summary(ligaEsp[[3]])
 
 View(ligaEsp[[1]]); View(ligaEsp[[2]]); View(ligaEsp[[3]])
 ```
-
-Seleccionamos las columnas de interés (Date, HomeTeam, AwayTeam, FTHG, FTAG y FTR) utilizando la librería `dplyr` y mostramos la nueva estructura 
+En este caso en específico, observamos que los datos cuentan con un campo de fecha, pero no todos tienen el mismo formato, esto deberá ser modificado, pero antes seleccionaremos las columnas de interés (Date, HomeTeam, AwayTeam, FTHG, FTAG y FTR) utilizando la librería `dplyr`.
 
 ```R
 library(dplyr)
@@ -44,6 +42,7 @@ ligaEsp <- lapply(ligaEsp, select, Date, HomeTeam:FTR)
 
 str(ligaEsp)
 ```
+
 Cambiamos el forrmato de la fecha de `chr` a `Date` con el comando `mutate`. En este paso se debe tener claro el formato en el que se encuentra escritas las fechas. Con el comando `str` verificamos que se haya realizado de forma correcta el cambio.
 
 ```R
@@ -54,7 +53,9 @@ ligaEsp[[3]] <- mutate(ligaEsp[[3]], Date = as.Date(Date, "%d/%m/%Y"))
 str(ligaEsp)
 View(ligaEsp[[1]]); View(ligaEsp[[2]]); View(ligaEsp[[3]])
 ```
-Por último unimos los tres dataframes en uno solo. Y nuevamente observamos la estructura de nuestros datos. 
+Por último unimos los tres dataframes en uno solo. Con el comando ``do.call()`` combinamos todos los datos en un solo dataframe. Utilizando el argumento ``rbin`` indicamos que cada dataframe individual de la lista se una en un nuevo renglon al finalizar anterior. 
+
+Y nuevamente observamos la estructura de nuestros datos. 
 
 ```R
 data <- do.call(rbind, ligaEsp)
