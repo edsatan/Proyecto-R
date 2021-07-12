@@ -1,15 +1,19 @@
+# Postwork 08 Dashboards con Shiny - Entorno GUI
+
+Comenzamos cargando las librerías necesarias para le creación de Dashboard
 ```R
 library(shiny)
 library(shinydashboard)
 library(shinythemes)
 ```
 
+Seleccionamos el directorio de trabajo en donde se almacenan los datos del archivo `match.data.csv`
 ```R
 setwd("C:/Users/santa/Desktop/R/Sesion 08/Postwork8/data")
 data <- read.csv("match.data.csv")
 ```
 
-Esta parte es el análogo al ui.R
+Dentro del ambiente del ``ui``  creamos cuatro `menuItem` para cada una de las pestañas: Gráfica de barras, Probabilidades, Data Table y Factores de ganancia.
 ```R
 ui <-fluidPage(
         
@@ -27,7 +31,10 @@ ui <-fluidPage(
                 )
                 
             ),
-            
+```
+
+En el dashboardBody agregamos los elementos de cada una de las pestañas. En la primera pestaña se inicializa un gráfico de tipo `Barras`, un `selectInput` para seleccionar las variables a graficar, las cuales se indican en el vector `choices`.
+```R
             dashboardBody(
                 
                 tabItems(
@@ -35,7 +42,7 @@ ui <-fluidPage(
                     # Histograma
                     tabItem(tabName = "Barras",
                             fluidRow(
-                                titlePanel("Histograma de las variables del data set mtcars"), 
+                                titlePanel("Gráfico de Barras del archivo match.data"), 
                                 selectInput("xx", "Seleccione el valor de X",
                                             choices = c("home.score", "away.score")),
                                 
@@ -43,7 +50,10 @@ ui <-fluidPage(
                                 
                             )
                     ),
-                    
+```
+
+En la segunda pestaña se muestran tres imagenes generadas en el Postwork 03
+```R
                     # Probabilidades
                     tabItem(tabName = "probs",
                             fluidRow(
@@ -58,7 +68,11 @@ ui <-fluidPage(
                                     height = 350, width = 450)
                             )
                     ),
-                    
+```
+
+En la tercera se inicializa una pestaña para un `Data Table`.
+
+```R
                     
                     
                     # Data Table
@@ -68,7 +82,9 @@ ui <-fluidPage(
                                 dataTableOutput ("data_table")
                             )
                     ), 
-                    
+```
+Y por último, en la cuarta pestaña se muestras las imágenes generadas por el código (`momios.R`)[https://github.com/beduExpert/Programacion-R-Santander-2021/blob/main/Sesion-08/Postwork/momios.R]
+```R
                     # Factores de ganancia
                     tabItem(tabName = "fact",
                             fluidRow(
