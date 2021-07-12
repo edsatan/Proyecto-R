@@ -83,7 +83,8 @@ En la tercera se inicializa una pestaña para un `Data Table`.
                             )
                     ), 
 ```
-Y por último, en la cuarta pestaña se muestras las imágenes generadas por el código (`momios.R`)[https://github.com/beduExpert/Programacion-R-Santander-2021/blob/main/Sesion-08/Postwork/momios.R]
+Y por último, en la cuarta pestaña se muestras las imágenes generadas por el código (momios.R)[https://github.com/beduExpert/Programacion-R-Santander-2021/blob/main/Sesion-08/Postwork/momios.R]
+
 ```R
                     # Factores de ganancia
                     tabItem(tabName = "fact",
@@ -103,7 +104,7 @@ Y por último, en la cuarta pestaña se muestras las imágenes generadas por el 
     )
 ```
 
-De aquí en adelante es la parte que corresponde al server
+De aquí en adelante es la parte que corresponde al `server`. Aquí corresponde llamar a la gráfica de la primera pestaña con los comandos de la librería `ggplot2`
 
 ```R
 server <- function(input, output) {
@@ -121,7 +122,10 @@ server <- function(input, output) {
         
         
     })
-    
+```
+
+Y llamar al `Data Table` de la última pestaña. Con el comando `options` seleccionamos la cantidad de datos que se van a mostrar en nuestro Dashboard.
+```R
     #Data Table
     output$data_table <- renderDataTable( {data}, 
                                           options = list(aLengthMenu = c(5,25,50),
