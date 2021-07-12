@@ -555,5 +555,3 @@ Por último, cerramos la conexión con la base de datos
 ```R
 rm(cone)
 ```
-
-<h3 align="center"> ⏭️ <a href="https://github.com/edsatan/Proyecto-R/tree/main/Postwork-08"> Postwork 08</a></h3>
