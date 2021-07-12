@@ -75,7 +75,7 @@ tablaCocientesPlot
   <img src="cocientes.png" />
 </p>
 
-Mediante un procedimiento de boostrap, obtnemos más cocientes similares a los obtenidos en la dataframe `probdf`. Aplicamos el remuestreo bootstrap
+Mediante un procedimiento de boostrap, obtenmos más cocientes similares a los obtenidos en la dataframe `probdf`. Aplicamos el remuestreo bootstrap
 
 ```R
 bootstrap <- replicate(n=10000, sample(probdf$cociente, replace=TRUE))
