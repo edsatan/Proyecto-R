@@ -137,3 +137,5 @@ Y llamar al `Data Table` de la última pestaña. Con el comando `options` selecc
 
 shinyApp(ui, server)
 ```
+
+El `Dashboard` se puede visualizar en el siguiente [enlace](https://edsantamaria.shinyapps.io/Dashboard/)
