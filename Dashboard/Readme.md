@@ -83,7 +83,7 @@ En la tercera se inicializa una pestaña para un `Data Table`.
                             )
                     ), 
 ```
-Y por último, en la cuarta pestaña se muestras las imágenes generadas por el código (momios.R)[https://github.com/beduExpert/Programacion-R-Santander-2021/blob/main/Sesion-08/Postwork/momios.R]
+Y por último, en la cuarta pestaña se muestras las imágenes generadas por el código [``momios.R``](https://github.com/beduExpert/Programacion-R-Santander-2021/blob/main/Sesion-08/Postwork/momios.R)
 
 ```R
                     # Factores de ganancia
