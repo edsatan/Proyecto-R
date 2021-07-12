@@ -166,7 +166,7 @@ write.csv(data, "dataPostwork2.csv", row.names = FALSE)
 
 Cargamos el dataframe obtenido en el [Postwork 02](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-02) y modificamos el formato de las fechas (utilizando el comando `mutate()`) para facilitar más adelante su manipulación.
  ```R
-data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/Postwork-02/dataPostwork2.csv")
+data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/dataPostwork2.csv")
 
 data <- mutate(data, Date = as.Date(Date, "%Y-%m-%d"))
 ```
