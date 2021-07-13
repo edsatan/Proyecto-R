@@ -171,7 +171,7 @@ data <- read.csv("https://raw.githubusercontent.com/edsatan/Proyecto-R/main/data
 data <- mutate(data, Date = as.Date(Date, "%Y-%m-%d"))
 ```
 
-Seleccionamos nuestras columnas de interés (Goles de casa `FTHG` y goles de visitante `FTAG`) para realizar el cálculo de las probabilidades marginales y conjunta como en el [Postwork 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
+Seleccionamos nuestras columnas de interés (goles de casa `FTHG` y goles de visitante `FTAG`) para realizar el cálculo de las probabilidades marginales y conjunta como en el [Postwork 01](https://github.com/edsatan/Proyecto-R/tree/main/Postwork-01)
 
 ```R
 homeGoals2 <- data$FTHG
@@ -259,7 +259,7 @@ probVisitantePlot
   <img src="Sesion3_plot2.png" />
 </p>
 
-Para la probabilidad conjunta, en donde interactuan dos variables, goles de locales y goles de visitantes, obtamos por un mapa de calor para ilustrar los resultados. Por medio de un mapa de color podemos determinar los disntintos valores de probabilidad obtenidos dependiendo de la tonalidad que adquieran, permitiendo un análisis visual sencillo y rápido de los resultados.
+Para la probabilidad conjunta, en donde interactuan dos variables, goles de locales y goles de visitantes, optamos por un mapa de calor para ilustrar los resultados. Por medio de un mapa de calor podemos determinar los disntintos valores de probabilidad obtenidos dependiendo de la tonalidad que adquieran, permitiendo un análisis visual sencillo y rápido de los resultados.
 
 ```R
 install.packages("reshape2")
@@ -474,7 +474,7 @@ ranking <-rank.teams(anotaciones, equipos, max.date=fechas[n-1], min.date = fech
 ``` 
 
 Finalmente, se estiman las probabilidades de los eventos, el equipo de casa gana, el equipo visitante gana o el resultado es un empate para los partidos que se
-jugaron en la última fecha del vector de fechas fecha.
+jugaron en la última fecha del vector fechas.
 
 ```R
 p <- predict(ranking, date = fechas[n])
@@ -548,7 +548,7 @@ consulta
 #1 2015-12-20 Real Madrid         10 Vallecano          2
 ```
 
-El Real Madrid en ese partido anoto 10 goles y jugo contra el equipo Vallecano como podemos ver en la consulta de arriba. Por supuesto que fue goleada.
+El Real Madrid en ese partido anotó 10 goles y jugó contra el equipo Vallecano, como podemos ver en la consulta de arriba. Por supuesto que fue goleada.
 
 Por último, cerramos la conexión con la base de datos
 
