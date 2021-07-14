@@ -290,7 +290,7 @@ serie <- match.data %>% mutate(anio_mes = substr(date, 1, 7)) %>%
 
 
 # 3. Crea la serie de tiempo del promedio por mes de la suma de goles hasta diciembre de 2019.
-serie.ts <- ts(serie$goles_prom, end = c(2019, 12), frequency = 12)
+serie.ts <- ts(serie$goles_prom, end = c(2019, 12), frequency = 10)
 
 # 4. Grafica la serie de tiempo.
 plot(serie.ts, las = 1, col = 4, lwd = 2, xlab = "Tiempo", ylab = "Goles",
