@@ -572,7 +572,7 @@ En seguida construimos la serie de tiempo (Una serie de tiempo son datos estadí
 
 
 ```R
-serie.ts <- ts(serie$goles_prom, end = c(2019, 12), frequency = 12)
+serie.ts <- ts(serie$goles_prom, end = c(2019, 12), frequency = 10)
 
 plot(serie.ts, las = 1, col = 4, lwd = 2, xlab = "Tiempo", ylab = "Goles",
      main = "Serie de Goles Promedio",
