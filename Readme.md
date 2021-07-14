@@ -582,6 +582,10 @@ plot(serie.ts, las = 1, col = 4, lwd = 2, xlab = "Tiempo", ylab = "Goles",
   <img src="seriedetiempo.png" />
 </p>
 
+__Observaciones__
+
+Notamos que para casi todos los meses contemplados entre Agosto de 2010 y Junio de 2020, los meses de junio y julio no se encuentran en el histórico. Esto debido a que en dichos meses no hay temporada futbolística. Por esta razón, asignamos `frequency = 10` (frecuencia) a nuestra serie de tiempo `serie.ts`, con el propósito de ajustar la periodicidad lo mejor posible a los datos que tenemos. Sin embargo, una frecuencia de 12 sólo desplazaría ligeramente la gráfica, por lo que ambas opciones son viables.
+
 # Postwork 07 RStudio Cloud - Github, conexiones con BDs y lectura de datos externos
 
 El objetivo de este postwork es realizar el alojamiento de un fichero `.csv` a una base de datos (BDD), en un local host de Mongodb a través de `R`. Lo primero que se realiza es crear una conexión desde `Mongo Atlas` a `Mongo Compas`. Estando dentro de Compas se crea una base de datos con el nombre `match_games` y dentro de esta base de datos se crea la colección `match`. Dentro de la colección `match` se carga el archivo [`match.data.csv`](https://github.com/edsatan/Proyecto-R/blob/main/Postwork-07/match.data.csv) y nos cambiamos a `R Studio`
